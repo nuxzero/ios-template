@@ -9,14 +9,14 @@ import Foundation
 
 class NotesViewModel {
     let notes: Observable<[Note]> = Observable([Note]())
-    private let noteService: NoteService
+    private let noteService: NoteServiceProtocol
     
-    init(_ noteService: NoteService) {
+    init(_ noteService: NoteServiceProtocol) {
         self.noteService = noteService
     }
     
     func fetchNotes() {
-        noteService.retrieveNotes { result in
+        noteService.fetchNotes { result in
             switch result {
             case .success(let notes):
                 self.notes.value = notes
