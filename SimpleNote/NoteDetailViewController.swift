@@ -38,30 +38,4 @@ class NoteDetailViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "ToEditNote" {
-            guard let destinationViewController = segue.destination as? UINavigationController,
-                  let noteFormViewController = destinationViewController.children[0] as? NoteFormViewController else {
-                fatalError("The segue is not instance of NoteFormViewController.")
-            }
-            noteFormViewController.delegate = self
-            noteFormViewController.note = note
-        }
-    }
-
-}
-
-extension NoteDetailViewController: NoteFormDelegate {
-    func noteFormSaved() {
-        updateView()
-    }
-    
-    func noteFormCancelled() {
-        
-    }
 }

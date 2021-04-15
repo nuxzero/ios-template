@@ -64,24 +64,6 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
                 fatalError("The segue is not an instance of NoteDetailViewController.")
             }
             noteDetailViewController.note = notes[tableView.indexPathForSelectedRow!.row]
-        } else if segue.identifier == "ToNoteForm" {
-            guard let navigationController = segue.destination as? UINavigationController else {
-                fatalError("The segue is not an instance of UINavigationController.")
-            }
-            guard let noteFormViewController = navigationController.children[0] as? NoteFormViewController else {
-                fatalError("The segue is not an instance of NoteFormViewController.")
-            }
-            noteFormViewController.delegate = self
-        }
-    }
-}
-
-extension NotesViewController: NoteFormDelegate {
-    func noteFormSaved() {
-        
-    }
-    
-    func noteFormCancelled() {
-        print("Cancelled.")
+        } 
     }
 }
