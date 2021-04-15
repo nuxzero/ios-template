@@ -8,8 +8,10 @@
 import Foundation
 
 class NoteDetailViewModel {
-    let note: Observable<Note> = Observable(nil)
     private let noteService: NoteServiceProtocol
+    
+    let note: Observable<Note> = Observable(nil)
+    let error: Observable<Error> = Observable(nil)
     
     init(_ noteService: NoteServiceProtocol) {
         self.noteService = noteService
@@ -21,8 +23,8 @@ class NoteDetailViewModel {
             case .success(let note):
                 self.note.value = note
             case .failure(let error):
-                // TODO: set error value
                 print(error)
+                self.error.value = error
             }
         }
     }

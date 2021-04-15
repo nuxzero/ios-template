@@ -17,10 +17,6 @@ class NotesViewModelTests: XCTestCase {
         viewModel = NotesViewModel(noteService)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testFetchNotes_successful() {
         let expectation = self.expectation(description: "Fetch notes")
         
@@ -36,7 +32,7 @@ class NotesViewModelTests: XCTestCase {
     
     func testFetchNotes_failure() {
         let expectation = self.expectation(description: "Fetch notes")
-        noteService.fetchNotesSuccessfulflag = false
+        noteService.fetchNotesSuccessfulFlag = false
         
         viewModel.fetchNotes()
         

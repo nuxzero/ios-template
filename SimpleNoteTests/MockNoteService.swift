@@ -28,11 +28,11 @@ class MockNoteService: NoteServiceProtocol {
         ),
     ]
 
-    var fetchNotesSuccessfulflag = true
+    var fetchNotesSuccessfulFlag = true
     var fetchNoteSuccessfulFlag = true
     
     func fetchNotes(_ completionHandler: @escaping (Result<[Note], Error>) -> Void) {
-        if fetchNotesSuccessfulflag {
+        if fetchNotesSuccessfulFlag {
             completionHandler(.success(notes))
         } else {
             completionHandler(.failure(NetworkError.noInternetConection))
@@ -40,10 +40,14 @@ class MockNoteService: NoteServiceProtocol {
     }
     
     func fetchNote(with id: Int, completionHandler: @escaping (Result<Note, Error>) -> Void) {
-        if let note = notes.first(where: { $0.id == id}), fetchNoteSuccessfulFlag {
-            completionHandler(.success(note))
+        if let note = notes.first(where: { $0.id == id}) {
+            if fetchNoteSuccessfulFlag {
+                completionHandler(.success(note))
+            } else {
+                completionHandler(.failure(NetworkError.noInternetConection))
+            }
         } else {
-            completionHandler(.failure(NetworkError.noInternetConection))
+            completionHandler(.failure(NetworkError.emptyResponse))
         }
     }
 }
