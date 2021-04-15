@@ -10,16 +10,16 @@
 import Foundation
 
 class Observable<T> {
-    typealias Listener = (T) -> Void
+    typealias Listener = (T?) -> Void
     var listener: Listener?
     
-    var value: T {
+    var value: T? {
         didSet {
             listener?(value)
         }
     }
     
-    init(_ value: T) {
+    init(_ value: T?) {
         self.value = value
 }
     

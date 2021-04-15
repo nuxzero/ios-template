@@ -10,6 +10,7 @@ import UIKit
 class NoteDetailViewController: UIViewController {
 
     let noteService = NoteService.shared
+    private let viewModel = NoteDetailViewModel(NoteService.shared)
     
     var note: Note?
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,24 +19,18 @@ class NoteDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateView()
-    }
-    
-    @IBAction func editNote(_ sender: Any) {
-        print("Go to note form")
-    }
-    
-    
-    func updateView() {
-        noteService.retrieveNote(with: note!.id) { result in
-            switch result {
-            case .success(let note):
-                self.titleLabel.text = note.title
-                self.descriptionLabel.text = note.note
-                ImageLoader.loadImage(with: self.bannerImageView, for: note.image, completionHandler: nil)
-            case .failure(let error):
-                print(error)
+        
+        viewModel.note.bind { note in
+            guard let note = note else {
+                return
             }
+            self.titleLabel.text = note.title
+            self.descriptionLabel.text = note.note
+            ImageLoader.loadImage(with: self.bannerImageView, for: note.image, completionHandler: nil)
+        }
+        
+        if let note = note {
+            viewModel.fetchNote(note.id)
         }
     }
 }

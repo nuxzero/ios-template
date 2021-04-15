@@ -120,13 +120,7 @@
                         <viewLayoutGuide key="safeArea" id="ihv-qZ-oKG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" largeTitleDisplayMode="never" id="OFV-x5-lJl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="eBC-5U-h8U">
-                            <connections>
-                                <action selector="editNote:" destination="agr-Am-S4S" id="saQ-0q-Jdh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Detail" largeTitleDisplayMode="never" id="OFV-x5-lJl"/>
                     <connections>
                         <outlet property="bannerImageView" destination="sJG-hf-TfU" id="MSr-C8-fxf"/>
                         <outlet property="descriptionLabel" destination="Z6v-oe-wDA" id="Y0v-Zc-fYB"/>

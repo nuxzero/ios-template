@@ -18,7 +18,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         navigationController?.navigationBar.prefersLargeTitles = true
         
         viewModel.notes.bind { notes in
-            self.notes = notes
+            self.notes = notes  ?? []
             self.tableView.reloadData()
         }
         

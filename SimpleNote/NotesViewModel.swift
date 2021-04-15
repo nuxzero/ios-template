@@ -21,7 +21,6 @@ class NotesViewModel {
             case .success(let notes):
                 self.notes.value = notes
             case .failure(let error):
-                // TODO: set error value
                 print(error)
             }
         }

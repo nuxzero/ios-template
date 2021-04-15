@@ -15,6 +15,7 @@
 		D38C645C25BD4EAE0056365F /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C645B25BD4EAE0056365F /* DateUtils.swift */; };
 		D395910326274992004AFC80 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395910226274992004AFC80 /* NotesViewModel.swift */; };
 		D395911426274ED9004AFC80 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395911326274ED9004AFC80 /* Observable.swift */; };
+		D39591222627D65A004AFC80 /* NoteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39591212627D65A004AFC80 /* NoteDetailViewModel.swift */; };
 		D3A4ED1325BC2793001D6138 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4ED1225BC2793001D6138 /* NetworkService.swift */; };
 		D3A4ED1825BC63DA001D6138 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4ED1725BC63D9001D6138 /* Request.swift */; };
 		D3EC6E8B25ACA66400051CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC6E8A25ACA66400051CC8 /* AppDelegate.swift */; };
@@ -54,6 +55,7 @@
 		D38C645B25BD4EAE0056365F /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D395910226274992004AFC80 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		D395911326274ED9004AFC80 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D39591212627D65A004AFC80 /* NoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewModel.swift; sourceTree = "<group>"; };
 		D3A4ED1225BC2793001D6138 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D3A4ED1725BC63D9001D6138 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		D3EC6E8725ACA66400051CC8 /* SimpleNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,13 +157,14 @@
 				D3EC6E8A25ACA66400051CC8 /* AppDelegate.swift */,
 				D3EC6E8C25ACA66400051CC8 /* SceneDelegate.swift */,
 				D3EC6E9025ACA66400051CC8 /* Main.storyboard */,
-				D3F8B73C25ADF1180095C686 /* NoteTableViewCell.swift */,
 				D3EC6E9325ACA66500051CC8 /* Assets.xcassets */,
 				D3EC6E9525ACA66500051CC8 /* LaunchScreen.storyboard */,
 				D3EC6E9825ACA66500051CC8 /* Info.plist */,
 				D31670DC25ACACA200A0179E /* NotesViewController.swift */,
 				D395910226274992004AFC80 /* NotesViewModel.swift */,
+				D3F8B73C25ADF1180095C686 /* NoteTableViewCell.swift */,
 				D3F8B74125AF46C60095C686 /* NoteDetailViewController.swift */,
+				D39591212627D65A004AFC80 /* NoteDetailViewModel.swift */,
 				D385CC9525B28B0A00C310D7 /* ImageLoader.swift */,
 			);
 			path = SimpleNote;
@@ -317,6 +320,7 @@
 			files = (
 				D3A4ED1325BC2793001D6138 /* NetworkService.swift in Sources */,
 				D395911426274ED9004AFC80 /* Observable.swift in Sources */,
+				D39591222627D65A004AFC80 /* NoteDetailViewModel.swift in Sources */,
 				D3EC6E8B25ACA66400051CC8 /* AppDelegate.swift in Sources */,
 				D3F8B74225AF46C60095C686 /* NoteDetailViewController.swift in Sources */,
 				D3A4ED1825BC63DA001D6138 /* Request.swift in Sources */,
