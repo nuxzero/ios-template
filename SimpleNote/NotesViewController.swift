@@ -10,26 +10,19 @@ import UIKit
 class NotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    let noteService = NoteService.shared
-    var notes:[Note] = []
+    private let viewModel = NotesViewModel(NoteService.shared)
+    private var notes:[Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        retrieveNotes()
-    }
-    
-    func retrieveNotes() {
-        noteService.retrieveNotes { result in
-            switch result {
-            case .success(let notes):
-                self.notes = notes
-                self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
-            }
+        
+        viewModel.notes.bind { notes in
+            self.notes = notes
+            self.tableView.reloadData()
         }
+        
+        viewModel.fetchNotes()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,17 +52,6 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         return CGFloat(90)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let note = notes[indexPath.row]
-            noteService.deleteNote(note.id) { result in
-                
-                self.notes.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            }
-        }
-    }
-    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -96,7 +78,7 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
 
 extension NotesViewController: NoteFormDelegate {
     func noteFormSaved() {
-        retrieveNotes()
+        
     }
     
     func noteFormCancelled() {
