@@ -8,9 +8,8 @@
 import UIKit
 
 class NotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     @IBOutlet weak var tableView: UITableView!
-    private let viewModel = NotesViewModel(NoteService.shared)
+    var viewModel: NotesViewModelProtocol = NotesViewModel(NoteService.shared)
     private var notes:[Note] = []
     
     override func viewDidLoad() {
