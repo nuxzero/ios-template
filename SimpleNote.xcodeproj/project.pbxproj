@@ -10,6 +10,8 @@
 		D31670D325ACA91F00A0179E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31670D225ACA91F00A0179E /* Note.swift */; };
 		D31670D825ACAA4F00A0179E /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31670D725ACAA4F00A0179E /* NoteService.swift */; };
 		D31670DD25ACACA200A0179E /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31670DC25ACACA200A0179E /* NotesViewController.swift */; };
+		D34362A126294B5B00A71385 /* NoteDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34362A026294B5B00A71385 /* NoteDetailViewControllerTests.swift */; };
+		D34362A626294BBF00A71385 /* MockNoteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34362A526294BBF00A71385 /* MockNoteDetailViewModel.swift */; };
 		D385CC9625B28B0A00C310D7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385CC9525B28B0A00C310D7 /* ImageLoader.swift */; };
 		D38C645425BD47E80056365F /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C645325BD47E80056365F /* Parameters.swift */; };
 		D38C645C25BD4EAE0056365F /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38C645B25BD4EAE0056365F /* DateUtils.swift */; };
@@ -55,6 +57,8 @@
 		D31670D225ACA91F00A0179E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D31670D725ACAA4F00A0179E /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		D31670DC25ACACA200A0179E /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		D34362A026294B5B00A71385 /* NoteDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		D34362A526294BBF00A71385 /* MockNoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNoteDetailViewModel.swift; sourceTree = "<group>"; };
 		D385CC9525B28B0A00C310D7 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		D38C645325BD47E80056365F /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		D38C645B25BD4EAE0056365F /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
@@ -186,10 +190,12 @@
 				D3EC6EA125ACA66500051CC8 /* SimpleNoteTests.swift */,
 				D3EC6EA325ACA66500051CC8 /* Info.plist */,
 				D395914A26287E69004AFC80 /* MockNotesViewModel.swift */,
+				D34362A526294BBF00A71385 /* MockNoteDetailViewModel.swift */,
 				D395913226282C96004AFC80 /* MockNoteService.swift */,
 				D395912C2627EC65004AFC80 /* NotesViewModelTests.swift */,
 				D395913A262834AC004AFC80 /* NoteDetailViewModelTests.swift */,
 				D3959145262873AE004AFC80 /* NotesViewControllerTests.swift */,
+				D34362A026294B5B00A71385 /* NoteDetailViewControllerTests.swift */,
 			);
 			path = SimpleNoteTests;
 			sourceTree = "<group>";
@@ -356,11 +362,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D395913326282C96004AFC80 /* MockNoteService.swift in Sources */,
+				D34362A126294B5B00A71385 /* NoteDetailViewControllerTests.swift in Sources */,
 				D395913B262834AC004AFC80 /* NoteDetailViewModelTests.swift in Sources */,
 				D395914B26287E69004AFC80 /* MockNotesViewModel.swift in Sources */,
 				D3959146262873AE004AFC80 /* NotesViewControllerTests.swift in Sources */,
 				D395912D2627EC65004AFC80 /* NotesViewModelTests.swift in Sources */,
 				D3EC6EA225ACA66500051CC8 /* SimpleNoteTests.swift in Sources */,
+				D34362A626294BBF00A71385 /* MockNoteDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

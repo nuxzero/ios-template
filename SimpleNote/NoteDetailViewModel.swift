@@ -7,7 +7,14 @@
 
 import Foundation
 
-class NoteDetailViewModel {
+protocol NoteDetailViewModelProtocol {
+    var note: Observable<Note> { get }
+    var error: Observable<Error> { get }
+    
+    func fetchNote(_ id: Int)
+}
+
+class NoteDetailViewModel: NoteDetailViewModelProtocol {
     private let noteService: NoteServiceProtocol
     
     let note: Observable<Note> = Observable(nil)

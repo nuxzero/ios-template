@@ -92,7 +92,7 @@
         <!--Detail-->
         <scene sceneID="fHe-tu-phz">
             <objects>
-                <viewController id="agr-Am-S4S" customClass="NoteDetailViewController" customModule="SimpleNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteDetailViewController" id="agr-Am-S4S" customClass="NoteDetailViewController" customModule="SimpleNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0e-eo-1rh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

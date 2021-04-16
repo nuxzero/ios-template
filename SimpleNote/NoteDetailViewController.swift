@@ -8,9 +8,8 @@
 import UIKit
 
 class NoteDetailViewController: UIViewController {
-
     let noteService = NoteService.shared
-    private let viewModel = NoteDetailViewModel(NoteService.shared)
+    var viewModel: NoteDetailViewModelProtocol = NoteDetailViewModel(NoteService.shared)
     
     var note: Note?
     @IBOutlet weak var titleLabel: UILabel!
